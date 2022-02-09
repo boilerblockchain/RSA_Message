@@ -5,7 +5,7 @@ const privateKey = `-----BEGIN RSA PRIVATE KEY-----
 
 -----END RSA PRIVATE KEY-----`;
 
-const key = new NodeRSA(privateKey);
+const key = new NodeRSA(privateKey, "pkcs1-private-pem");
 
 // TODO: fill in the encrypted message
 const message = "";
