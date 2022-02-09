@@ -1,14 +1,12 @@
 const NodeRSA = require('node-rsa');
 
 // TODO: fill in someone's public key
-const publicKey = `-----BEGIN RSA PUBLIC KEY-----
+const publicKey = "MEgCQQDmAE8A41d2QjigQjrEaMo0URPnspMHPedYhf2mvINYSFA76sffs2wAX+NR8qC2EI4CXaaCiw5fpEYSFPfUem1vAgMBAAE=";
 
------END RSA PUBLIC KEY-----`;
-
-const key = new NodeRSA(publicKey);
+const key = new NodeRSA(publicKey, 'pkcs1-public-pem');
 
 // TODO: add a message to encrypt
-const message = "";
+const message = "hi Jason";
 const encrypted = key.encrypt(message, 'base64');
 
 console.log(encrypted);
